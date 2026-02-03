@@ -1,6 +1,7 @@
 import { Layout } from "@/components/layout/Layout";
 import { ShowcaseGallery } from "@/components/home/ShowcaseGallery";
 import { Moon, Sparkles, Eye, Heart, Code2 } from "lucide-react";
+import { NavLink } from "react-router-dom";
 
 const philosophyItems = [
   {
@@ -127,7 +128,12 @@ export default function HomePage() {
               Ready to embrace the quiet?
             </p>
          
-           <a href="/install" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary/10 text-primary border border-primary/20 font-medium transition-all duration-300 hover:bg-primary/20 hover:border-primary/40" > Begin Installation </a>
+      <NavLink
+  to="/install"
+  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary/10 text-primary border border-primary/20 font-medium transition-all duration-300 hover:bg-primary/20 hover:border-primary/40"
+>
+  Begin Installation
+</NavLink>
 
           </div>
         </div>
