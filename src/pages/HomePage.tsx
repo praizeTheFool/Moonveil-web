@@ -61,7 +61,7 @@ export default function HomePage() {
             
             <div className="space-y-6 prose-moon text-center animate-fade-in-up animation-delay-100">
               <p className="text-lg leading-relaxed">
-                Moonveil began as a personal experiment—a quiet rebellion against visual noise 
+                Moonveil began as a personal experiment a quiet rebellion against visual noise 
                 and unnecessary complexity.
               </p>
               <p className="text-lg leading-relaxed">
@@ -127,7 +127,7 @@ export default function HomePage() {
               Ready to embrace the quiet?
             </p>
             <a
-              href="/install"
+              href="/src/pages/InstallPage.tsx"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary/10 text-primary border border-primary/20 font-medium transition-all duration-300 hover:bg-primary/20 hover:border-primary/40"
             >
               Begin Installation
