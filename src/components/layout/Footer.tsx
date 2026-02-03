@@ -3,9 +3,10 @@ import { Github } from "lucide-react";
 export function Footer() {
   return (
     <footer className="border-t border-border/30 py-8">
+      {/* Main footer row (unchanged) */}
       <div className="container flex flex-col items-center justify-between gap-4 sm:flex-row">
-        <p className="text-sm text-muted-foreground text-center sm:text-left">
-          © 2025 Moonveil. Crafted in quiet.
+        <p className="text-sm text-muted-foreground">
+          Moonveil crafted in quiet.
         </p>
 
         <a
@@ -18,6 +19,11 @@ export function Footer() {
           <span>GitHub</span>
         </a>
       </div>
+
+      {/* Separate centered copyright */}
+      <p className="mt-6 text-center text-xs text-muted-foreground/70">
+        Copyright © 2026 Rahul.
+      </p>
     </footer>
   );
 }
