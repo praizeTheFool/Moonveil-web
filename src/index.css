@@ -1,0 +1,247 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Moonveil Design System - Moonlit, Minimal, Intentional */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    /* Deep night sky palette */
+    --background: 230 25% 5%;
+    --foreground: 220 20% 90%;
+
+    --card: 230 20% 8%;
+    --card-foreground: 220 20% 90%;
+
+    --popover: 230 20% 8%;
+    --popover-foreground: 220 20% 90%;
+
+    /* Moonlight accent - pale ethereal blue */
+    --primary: 220 60% 70%;
+    --primary-foreground: 230 25% 5%;
+
+    --secondary: 230 15% 15%;
+    --secondary-foreground: 220 20% 85%;
+
+    --muted: 230 15% 12%;
+    --muted-foreground: 220 10% 55%;
+
+    --accent: 250 30% 20%;
+    --accent-foreground: 220 20% 90%;
+
+    /* Warning/important - soft amber glow */
+    --destructive: 35 70% 50%;
+    --destructive-foreground: 230 25% 5%;
+
+    --border: 230 15% 18%;
+    --input: 230 15% 15%;
+    --ring: 220 60% 70%;
+
+    --radius: 0.75rem;
+
+    /* Custom Moonveil tokens */
+    --moon-glow: 220 80% 75%;
+    --moon-subtle: 220 40% 60%;
+    --night-deep: 230 30% 3%;
+    --night-surface: 230 20% 10%;
+    --silver: 220 15% 75%;
+    --silver-muted: 220 10% 50%;
+
+    /* Gradients */
+    --gradient-hero: radial-gradient(ellipse 80% 50% at 50% -20%, hsl(220 60% 30% / 0.4), transparent);
+    --gradient-glow: radial-gradient(circle at center, hsl(var(--moon-glow) / 0.15), transparent 70%);
+    --gradient-card: linear-gradient(135deg, hsl(230 20% 10%), hsl(230 25% 7%));
+    
+    /* Shadows */
+    --shadow-glow: 0 0 60px -15px hsl(var(--moon-glow) / 0.3);
+    --shadow-soft: 0 4px 20px -5px hsl(230 50% 5% / 0.5);
+    --shadow-card: 0 8px 32px -8px hsl(230 50% 5% / 0.6);
+
+    /* Sidebar - keeping for compatibility */
+    --sidebar-background: 230 20% 8%;
+    --sidebar-foreground: 220 20% 90%;
+    --sidebar-primary: 220 60% 70%;
+    --sidebar-primary-foreground: 230 25% 5%;
+    --sidebar-accent: 230 15% 15%;
+    --sidebar-accent-foreground: 220 20% 90%;
+    --sidebar-border: 230 15% 18%;
+    --sidebar-ring: 220 60% 70%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    @apply tracking-tight;
+  }
+
+  ::selection {
+    @apply bg-primary/30 text-foreground;
+  }
+}
+
+@layer components {
+  .text-gradient-moon {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--foreground)), hsl(var(--moon-subtle)));
+  }
+
+  .text-gradient-glow {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--moon-glow)));
+  }
+
+  .glow-moon {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .glow-text {
+    text-shadow: 0 0 40px hsl(var(--moon-glow) / 0.5);
+  }
+
+  .bg-hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  .bg-glow-gradient {
+    background: var(--gradient-glow);
+  }
+
+  .card-moon {
+    @apply rounded-xl border border-border/50;
+    background: var(--gradient-card);
+    box-shadow: var(--shadow-card);
+  }
+
+  .prose-moon {
+    @apply text-muted-foreground leading-relaxed;
+  }
+
+  .prose-moon strong {
+    @apply text-foreground font-medium;
+  }
+
+  .link-moon {
+    @apply text-primary transition-all duration-300 hover:text-primary/80;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-color: hsl(var(--primary) / 0.3);
+  }
+
+  .link-moon:hover {
+    text-decoration-color: hsl(var(--primary) / 0.6);
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  .animate-fade-in-slow {
+    animation: fadeIn 1.2s ease-out forwards;
+  }
+
+  .animate-glow-pulse {
+    animation: glowPulse 4s ease-in-out infinite;
+  }
+
+  .animation-delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Custom scrollbar for the moonlit theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--night-deep));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground) / 0.3);
+}
+
+/* Code blocks */
+code {
+  @apply px-1.5 py-0.5 rounded-md text-sm font-mono;
+  background: hsl(var(--night-surface));
+  color: hsl(var(--primary));
+}
+
+pre {
+  @apply p-4 rounded-lg overflow-x-auto;
+  background: hsl(var(--night-deep));
+  border: 1px solid hsl(var(--border) / 0.5);
+}
+
+pre code {
+  @apply p-0 bg-transparent;
+}
