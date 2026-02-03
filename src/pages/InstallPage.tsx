@@ -42,7 +42,7 @@ export default function InstallPage() {
               Installation
             </h1>
             <p className="text-lg text-muted-foreground animate-fade-in-up animation-delay-100">
-              Moonveil is designed for <strong className="text-foreground">Arch Linux</strong> and <strong className="text-foreground">Hyprland</strong>.
+              Moonveil is designed by <strong className="text-foreground">Rahul for Arch Linux</strong> and <strong className="text-foreground">Hyprland</strong>.
               It manages configuration files using symbolic links (symlinks).
             </p>
           </div>
