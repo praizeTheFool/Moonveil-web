@@ -4,9 +4,10 @@ export function Footer() {
   return (
     <footer className="border-t border-border/30 py-8">
       <div className="container flex flex-col items-center justify-between gap-4 sm:flex-row">
-        <p className="text-sm text-muted-foreground">
-          Moonveil — crafted in quiet.
+        <p className="text-sm text-muted-foreground text-center sm:text-left">
+          © 2025 Moonveil. Crafted in quiet.
         </p>
+
         <a
           href="https://github.com/notcandy001/Moonveil"
           target="_blank"
