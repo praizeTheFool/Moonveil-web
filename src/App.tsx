@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import InstallPage from "./pages/InstallPage";
 import LinksPage from "./pages/LinksPage";
+mport ScrollToTop from "./components/ScrollToTop";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -15,7 +16,8 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+     <BrowserRouter>
+     <ScrollToTop />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/install" element={<InstallPage />} />
