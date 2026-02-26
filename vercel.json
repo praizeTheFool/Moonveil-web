@@ -1,8 +1,13 @@
 {
   "redirects": [
     {
-      "source": "/os/stable",
+      "source": "/dots/stable/arch",
       "destination": "https://raw.githubusercontent.com/notcandy001/Moonveil/master/arch-installer.sh",
+      "permanent": false
+    },
+      {
+      "source": "/dots/stable/debian",
+      "destination": "https://raw.githubusercontent.com/notcandy001/Moonveil/master/debian-installer.sh",
       "permanent": false
     },
     {
