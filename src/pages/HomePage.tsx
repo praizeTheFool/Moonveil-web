@@ -79,7 +79,7 @@ export default function HomePage() {
             
             <div className="space-y-6 prose-moon text-center animate-fade-in-up animation-delay-100">
               <p className="text-lg leading-relaxed">
-                Moonveil began as a personal experiment—a quiet rebellion against visual noise 
+                Moonveil began as a personal experiment a quiet rebellion against visual noise 
                 and unnecessary complexity.
               </p>
               <p className="text-lg leading-relaxed">
