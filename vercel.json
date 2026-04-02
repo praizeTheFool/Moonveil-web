@@ -2,7 +2,7 @@
   "redirects": [
     {
       "source": "/moonveil",
-      "destination": "https://github.com/notcandy001/Moonveil/blob/master/get/install.sh"
+      "destination": "https://raw.githubusercontent.com/notcandy001/Moonveil/refs/heads/master/get/install.sh"
     }
   ]
 }
